@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .header{
+                padding: 10px;
+                text-align: center;
+                background: #34495E;
+                color: white;
+                font-size: 30px;
+            }
+            ul { list-style-type: none;
+                 margin: 0; 
+                 padding: 0;
+                 overflow: hidden;
+                 }    
+            li { float: left; 
+                font-size: 15px;
+                border: 2px solid #e7e7e7;
+                border-radius: 7px; 
+            }
+            li a { display: block;
+                   color: white;
+                   text-align: center; 
+                   padding: 5px 5px;
+                   text-decoration: none;
+                   font-family: calibri;
+            } 
+            li a:hover:not(.active) { 
+                background-color: #ABB2B9; 
+                 color: white;
+            border-radius: 7px; 
+            }
+             
+        </style>
+
+        <script>
+            function search()
+            {
+                var nik = document.getElementById("nik");
+            }
+        </script>
+        <title>Project Kelurahan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div class="header">
+           
+            <ul>
+                
+                <li style="float:right ">
+                    <a href="Form/Login.jsp">Login</a></li>
+                
+                <li style="float:right; margin-right: 15px;">      
+                    <a href="Form/SignUp.jsp">Sign Up</a></li>
+            </ul>
+                 </div>
+        
+        <input type="text" id="nik" placeholder="Masukkan NIK">
+        <input type="button" onclick="search()" value="Cari">
+        
+       
+        <br><br>
+        <table border="1">
+            <tr>
+                <th>Nomor Induk Kependudukan</th>
+                <th>Nama</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>3171080411020002</td>
+                <td>Hilman Aditya Fachrezy</td>
+                <td>Sedang Diproses</td>
+            </tr>
+        </table>
+        <br>
+        <!--
+                import java.sql.Connection;
+                import java.sql.DriverManager;
+                import java.sql.Statement;
+                import java.sql.ResultSet;
+                import java.sql.SQLException;
+                import java.util.ArrayList;
+                
+                Connection con=null;
+                Statement st=null;
+                ResultSet rs=null;
+                
+                String dbUrl="jdbc:derby://localhost:1527/Kelurahan";
+                String pwd="root";
+                String login="root";
+                String sql="";
+                
+                try
+                {
+                    Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+                    con=DriverManager.getConnection(dbUrl, login, pwd);
+                    st=con.createStatement();
+                    rs=st.executeQuery(sql);
+                    
+                    while/if(rs.next())
+                    {
+                    
+                    }
+                }
+                catch(ClassNotFoundException e){
+                    e.printStackTrace();
+                }catch(SQLException e){
+                    e.printStackTrace();
+                }
+                finally
+                {
+                    try
+                    {
+                        rs.close();
+                        st.close();
+                        con.clearWarnings();
+                        return ;
+                    }
+                    catch(SQLException e){
+                        e.printStackTrace();
+                        return ;
+                    }
+                }
+        -->
+    </body>
+</html>
